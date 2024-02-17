@@ -1,5 +1,5 @@
 # Jaci Brown || CSD 310 MOD 6.2
-#reuse as module
+
 import mysql.connector
 from mysql.connector import errorcode
 
@@ -11,7 +11,7 @@ config = {
 "raise_on_warnings": True
 
 }
-
+print("config complete")
 try:
     db= mysql.connector.connect(**config)
     print("\n Database user {} connected to MySQL on host {} with databse {} ".format(config["user"], config ["host"], config ["database"]))
@@ -29,5 +29,3 @@ except mysql.connector.Error as err:
 
 finally: 
     db.close()
-
-    
